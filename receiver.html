@@ -43,15 +43,19 @@ limitations under the License.
         Talk to me
         <iframe src="http://www.ynet.co.il" width="1280" height="720"></iframe>
     </DIV> -->
-    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+    <canvas id="myCanvas" width="1280" height="720" style="border:1px solid #000000;"></canvas>
 
     <script type="text/javascript" src="//www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js"></script>
     <script type="text/javascript">
         var c = document.getElementById("myCanvas");
         var ctx = c.getContext("2d");
-        ctx.moveTo(0,0);
-        ctx.lineTo(200,100);
-        ctx.stroke();
+        // ctx.moveTo(0,0);
+        // ctx.lineTo(200,100);
+        // ctx.stroke();
+        ctx.font = "30px Arial";
+        ctx.fillStyle = "pink";
+        ctx.fill();
+        ctx.fillText=("helloworld", 10, 50);
 
         window.onload = function() {
             cast.receiver.logger.setLevelValue(0);
@@ -108,7 +112,9 @@ limitations under the License.
         // utility function to display the text message in the input field
         function displayText(text) {
             console.log(text);
-            document.getElementById("message").innerHTML=text;
+            //document.getElementById("message").innerHTML=text;
+            ctx.fill();
+            ctx.fillText(text,10,50);
             window.castReceiverManager.setApplicationState(text);
         };
         </script>
