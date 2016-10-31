@@ -53,9 +53,9 @@ limitations under the License.
         // ctx.lineTo(200,100);
         // ctx.stroke();
         ctx.font = "30px Arial";
-        ctx.fillStyle = "pink";
-        ctx.fill();
-        ctx.fillText=("helloworld", 10, 50);
+        //ctx.fillStyle = "pink";
+        //ctx.fill();
+        ctx.strokeText=("helloworld", 10, 50);
 
         window.onload = function() {
             cast.receiver.logger.setLevelValue(0);
@@ -97,7 +97,7 @@ limitations under the License.
             window.messageBus.onMessage = function(event) {
                 console.log('Message [' + event.senderId + ']: ' + event.data);
                 // display the message from the sender
-                // displayText(event.data);
+                displayText(event.data);
 
                 // inform all senders on the CastMessageBus of the incoming message event
                 // sender message listener will be invoked
@@ -114,7 +114,7 @@ limitations under the License.
             console.log(text);
             //document.getElementById("message").innerHTML=text;
             ctx.fill();
-            ctx.fillText(text,10,50);
+            ctx.strokeText(text,10,50);
             window.castReceiverManager.setApplicationState(text);
         };
         </script>
