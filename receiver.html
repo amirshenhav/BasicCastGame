@@ -55,7 +55,7 @@ limitations under the License.
         ctx.font = "30px Arial";
         //ctx.fillStyle = "pink";
         //ctx.fill();
-        ctx.strokeText=("helloworld", 10, 50);
+        ctx.fillText=("helloworld", 10, 50);
 
         window.onload = function() {
             cast.receiver.logger.setLevelValue(0);
@@ -113,8 +113,8 @@ limitations under the License.
         function displayText(text) {
             console.log(text);
             //document.getElementById("message").innerHTML=text;
-            ctx.fill();
-            ctx.strokeText(text,10,50);
+            //ctx.fill();
+            //ctx.strokeText(text,10,50);
             window.castReceiverManager.setApplicationState(text);
         };
         </script>
