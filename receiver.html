@@ -18,9 +18,9 @@ limitations under the License.
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <style type="text/css">
-    body {
+    /*body {
         overflow:hidden;
-    }
+    }*/
     div{
         height:720PX;
         width:1280PX;
@@ -205,7 +205,7 @@ limitations under the License.
                 console.log('Message [' + event.senderId + ']: ' + event.data);
                 // display the message from the sender
                 // displayText(event.data);
-                
+
                 // inform all senders on the CastMessageBus of the incoming message event
                 // sender message listener will be invoked
                 window.messageBus.send(event.senderId, event.data);
